@@ -4,7 +4,7 @@ VitXi i18n
 
 ## How to translate to your language
 - Clone the repo or download the files
-- Download and Install the [i18n Manger tool](https://www.electronjs.org/apps/i18n-manager).
+- Download and Install the [i18n Manger tool](https://github.com/gilmarsquinelato/i18n-manager/releases).
 - Open the i18n Manager tool, then open the "locales" folder on it.
 
 Finally, after opening the folder "locales" using the i18n Manager tool, you will see the different languages for translating.

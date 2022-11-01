@@ -1,0 +1,1266 @@
+{
+  "about": {
+    "app_name": "{app_name} Communication System",
+    "information": "{app_name} ist ein vollständiger  WebRTC Client mit allen wichtigen Funktionen",
+    "features": {
+      "calls": "audio & video anrufe",
+      "chats": "chat mit team mitglieder",
+      "transfer_calls": "gespräche mit oder ohne rücksprache verbinden"
+    }
+  },
+  "administration": {
+    "agent_profiles": {
+      "agent_pauses_reason": {
+        "description": "Pausengründe werden verwendet , wenn ein Agent eine Sitzung in einer Warteschlangen pausiert",
+        "fields": {
+          "name": "name"
+        },
+        "label": "gründe für pausen",
+        "pause": "pause | pausen",
+        "rules": {
+          "name": "der name des grundes ist erforderlich"
+        }
+      },
+      "agent_profile": "agent profil",
+      "default_profile_alert": "das default profil kann nicht gelöscht werden.",
+      "description": "erstellen sie agentenprofile, in denen sie gründe für pausen festlegen können. profile können benutzerrollen zugeordnet werden.",
+      "fields": {
+        "crm_url": {
+          "actions": {
+            "add_parameter": "zusätzliche parameter",
+            "remove_parameter": "parameter löschen"
+          },
+          "description": "konfigurieren sie einen endpunkt ihres crm, um daten aus einem anruf zu speichern.",
+          "fields": {
+            "base_url": {
+              "invalid": "adresse nicht gültig",
+              "label": "basis adresse"
+            },
+            "dynamic_call_values": {
+              "call_type": {
+                "label": "anruf typ"
+              },
+              "callee_name": {
+                "label": "angerufener name"
+              },
+              "callee_number": {
+                "label": "angerufener nummer"
+              },
+              "caller_id_name": {
+                "label": "anrufer name"
+              },
+              "caller_id_number": {
+                "label": "anrufer nummer"
+              },
+              "queue": {
+                "label": "warteschlange"
+              }
+            },
+            "parameter_name": {
+              "label": "name parameter",
+              "placeholder": "https://your-crm.com"
+            },
+            "value": {
+              "label": "wert"
+            }
+          },
+          "label": "CRM Adresse (optional)",
+          "preview": "URL vorschau"
+        },
+        "is_global": {
+          "description": "wenn aktiviert, kann das profil von jedem der mieter besetzt werden.",
+          "label": "ist global"
+        },
+        "website_tab": {
+          "label": "Registerkarte \"Benutzerdefinierte Website",
+          "hint": "Hinzufügen einer benutzerdefinierten Registerkarte zur App mit einer eingebetteten Website",
+          "tab_name": {
+            "label": "Name der Registerkarte"
+          },
+          "url": {
+            "label": "Web-Url",
+            "hint": "* Geben Sie eine sichere Website (https://) ein, der Sie vertrauen können. Dies ist wichtig, damit Ihre Benutzer sicher sind."
+          },
+          "preview": "Vorschau"
+        }
+      },
+      "module_name": "agent profile",
+      "profile": "profil | profile"
+    },
+    "groups": {
+      "description": "Mit dem Zweck, dass die {app_name} Benutzer untereinander sichtbar werden, ist es notwendig, dass jedem Benutzer eine Gruppe zugewiesen ist, und danach geben wir anderen Benutzern Zugriff, um diese Gruppe zu sehen. Auf diese Weise koennen Sie mehrere Benutzergruppen erstellen, die sie auf die Gruppen beschränken, die sie sehen können. Dazu erstellen wir zunächst den Namen.",
+      "errors": {
+        "groups": "Die Gruppe kann nicht geladen werden.",
+        "tenants": "Die Nutzer können nicht geladen werden."
+      },
+      "fields": {
+        "description": "Beschreibung",
+        "tenant": "nutzer",
+        "name": "name"
+      },
+      "module_name": "Gruppen",
+      "rules": {
+        "name": "Gruppenname ist erforderlich",
+        "tenant": "Nutzername ist erforderlich"
+      },
+      "group": "Gruppe | Gruppen"
+    },
+    "manage": "Verwaltung",
+    "module_name": "administration",
+    "presence": {
+      "description": "Hier kann der Systemadministrator die verschiedenen Anwesenheitsstatus erstellen, die Benutzer verwenden koennen. Standardmaessig gibt es fuenf (5) Status: Verfügbar, Nicht stoeren, Mittagspause und Geschaeftsreise, Sie oennen jedoch weitere hinzufügen.",
+      "info": {
+        "default_status": "Default status kann nicht bearbeitet oder gelöscht werden."
+      },
+      "module_name": "Anwesenheitsstatus",
+      "offline": "Offline",
+      "online": "Online",
+      "select_icon": "Icon ausgewählt",
+      "status": {
+        "available": "verfügbar",
+        "away": "nicht anwesend",
+        "business_trip": "Geschäftsreise",
+        "do_not_disturb": "Bitte nicht stören",
+        "lunch_break": "kurze Pause"
+      },
+      "status_color": "Status Farbe"
+    },
+    "role_manager": {
+      "agent_profile": {
+        "hint": "* Weisen Sie ein Agentenprofil zu, das verwendet werden soll, falls die zugewiesene Rolle über Callcenter-Berechtigungen verfügt."
+      },
+      "default_roles": {
+        "admin": "Nutzer Administrator",
+        "agent": "Agent",
+        "super-admin": "Super Administrator",
+        "user": "Benutzer"
+      },
+      "description": "Bearbeiten oder erstellen Sie benutzerdefinierte Rollen und weisen Sie Berechtigungen entsprechend den Rollen zu, die Benutzer ausführen werden.",
+      "full_access": "Vollzugriff",
+      "module_name": "Rollen Verwaltung",
+      "permissions": {
+        "label": "Freigabe | Freigaben",
+        "permissions": {
+          "assigned-tenant": "Bestätigte Mitglieder",
+          "call-center": {
+            "call-center-features": {
+              "description": "Callcenter-Funktionen wie An- und Abmeldung in Warteschlangen sind aktiviert.",
+              "label": "Call Center Funktionen"
+            },
+            "group_name": "Callcenter",
+            "queue-selection": {
+              "description": "Wenn diese Option aktiviert ist, kann der Agent die Warteschlange(n) auswählen, bei denen er sich anmelden soll. Wenn diese Option deaktiviert ist, melden sie sich bei allen Warteschlangen an, zu denen sie gehören.",
+              "label": "Warteschlangenauswahl"
+            }
+          },
+          "management": {
+            "agent-profiles": {
+              "description": "Erlauben Sie diese Wahl wenn der Nutzer Einstellungen an den Profilen vornehmen darf.",
+              "label": "Agent Profile"
+            },
+            "group_name": "Verwaltung",
+            "roles": {
+              "description": "Erlauben Sie diese Wahl wenn der Nutzer Einstellungen an den Rollen vornehmen darf.",
+              "label": "Rollen"
+            },
+            "users": {
+              "description": "Erlauben Sie diese Wahl wenn der Nutzer Einstellungen machen darf.",
+              "label": "Nutzer"
+            }
+          },
+          "misc": {
+            "group_name": "Verschiedene",
+            "update_social_networks": {
+              "description": "Berechtigung zur Bearbeitung der sozialen Netzwerke im Footer",
+              "label": "Update soziale Netzwerke"
+            },
+            "view-recordings": {
+              "description": "Der Benutzer kann seine von der PBX-Anlage generierten Anrufaufzeichnungen sehen",
+              "label": "Aufnahmen anzeigen"
+            }
+          }
+        },
+        "select_all": "Alle auswählen",
+        "unselect": "Auswahl aufheben"
+      },
+      "role": "Rolle | Rollen"
+    },
+    "social_networks": {
+      "description": "Hier können Sie die sozialen Medien konfigurieren, die in der Fußzeile angezeigt werden.",
+      "module_name": "Soziale Netzwerke",
+      "socials": {
+        "facebook": {
+          "hint_text": "Bitte Ihre Benutzernamen für Facebook ausfüllen.",
+          "prefix": "https://facebook.com/"
+        },
+        "instagram": {
+          "hint_text": "Bitte Ihren Benutzername für Instagramm ausfüllen.",
+          "prefix": "https://instagram.com/"
+        },
+        "twitter": {
+          "hint_text": "Bitte Ihren Benutzernamen für Twitter ausfüllen",
+          "prefix": "https://twitter.com/"
+        },
+        "youtube": {
+          "hint_text": "Bitte Ihren Benutzernamen für Youtube ausfüllen.",
+          "prefix": "https://youtube.com/"
+        }
+      }
+    },
+    "user_manager": {
+      "description": "Erstellen Sie die verschiedenen Benutzer fuer {app_name}. Verwalten Sie ihre Erweiterungen und Berechtigungen von diesem Modul aus.",
+      "error_on_delete": "Es ist nicht erlaubt, den einzigen Benutzer aus der Anwendung zu loeschen.",
+      "module_name": "user manager",
+      "sections": {
+        "details": {
+          "change_password": "neues Passwort setzen (optional)",
+          "permissions": "Berechtigungen",
+          "role": "Rollen",
+          "role_with_call_center_features": "Die Rolle verfügt über eine Callcenter Funktion.",
+          "section_name": "Benutzerdetails",
+          "validations": {
+            "name": "Name ist erforderlich",
+            "password": "Das Passwort muss mindestens aus 8 Zeichen bestehen.",
+            "role": "Benutzerrolle ist erforderlich",
+            "username": "Benutzer ist erforderlich"
+          }
+        },
+        "device": {
+          "can_view_recordings": "Benutzer kann seine Aufzeichnungen sehen",
+          "device": "Gerät",
+          "device_not_found": "Das zugewiesene Gerät {source} wurde in der PBX-Anlage nicht gefunden oder ist nicht verfügbar.",
+          "group_module_info": "Keine Gruppen für den ausgewählten Mandanten erkannt, können Sie hier eine Gruppe erstellen:",
+          "group_placeholder": "bitte Gruppe auswählen",
+          "groups": "Gruppen",
+          "groups_hint": "legen sie bitte fest zu welcher gruppe der benutzer gehoert.",
+          "no_devices": "kein Gerät verfügbar",
+          "no_phonebooks": "kein Telefonbuch verfügbar",
+          "phonebooks": "Telefonbuch",
+          "phonebooks_hint": "bitte ausgewähltes Telefonbuch zuweisen.",
+          "remove_device": "ausgewähltes Gerät löschen.",
+          "section_name": "Benutzerdaten",
+          "tenant": "nutzer",
+          "validations": {
+            "device": "bitte das Gerät auswählen, dass sie zuweisen wollen",
+            "phonebooks": "bitte ausgewähltes Telefonbuch zuweisen",
+            "tenant": "bitte ausgewählten Nutzer zuweisen."
+          }
+        }
+      },
+      "user": "user | Benutzer",
+      "user_already_exists": "Benutzername existiert schon."
+    }
+  },
+  "app_setup": {
+    "alerts": {
+      "error": "{app_name} ist nicht installiert.",
+      "success": "Anwendung erfolgreich erkannt."
+    },
+    "description": "",
+    "fields": {
+      "auto_launch": {
+        "label": "Automatischer Start der Anwendung beim starten des Betriebssystems"
+      },
+      "host": {
+        "placeholder": "your-pbx.com"
+      }
+    },
+    "title": "Eingabe des Hosts wo {app_name} installiert ist."
+  },
+  "calls": {
+    "actions": {
+      "answer": "angenommen",
+      "audio_answer": "Audio angenommen",
+      "cancel_share_screen": "Abbruch Screen Share",
+      "crm": {
+        "label": "CRM"
+      },
+      "disable_camera": "Kamera deaktivieren",
+      "enable_camera": "Kamera einschalten",
+      "hang_up": "auflegen",
+      "hold": {
+        "hold": "Halten",
+        "unhold": "Zurückholen"
+      },
+      "keypad": "Tastatur",
+      "make_call": "anrufen",
+      "mute_audio": "stummschalten",
+      "mute_video": "Video stummschalten",
+      "reject": "ablehnen",
+      "share_screen": "Bildschirm teilen",
+      "transfer": {
+        "alerts": {
+          "accepted": "akzeptiert",
+          "failed": "Fehler",
+          "progress": "in Arbeit",
+          "request_failed": "Anforderung fehlgeschlagen",
+          "request_succeeded": "Anforderung erfolgreich",
+          "success": "erfolgreich verbunden",
+          "trying": "versuchen"
+        },
+        "complete_transfer": "Transfer abgeschlossen",
+        "label": "Weiterleitungs Nummer",
+        "transfer": "Weiterleitung",
+        "type": {
+          "attended": "Besuch",
+          "blind": "ohne Rücksprache"
+        }
+      },
+      "unmute_audio": "Stummschaltung",
+      "video_answer": "video Start",
+      "call": "aufrufen"
+    },
+    "call": "Anruf | Anrufe",
+    "conference": {
+      "actions": {
+        "end_conference": "Konferenz beenden",
+        "end_conference_and_hang_up": "Konferenz und Gespräch beenden.",
+        "start_audio_conference": "audiokonferenz starten",
+        "start_conference": "konferenz beginnen"
+      },
+      "add_participant": "Teilnehmer hinzufügen",
+      "conference": "Konferenz",
+      "join_call": "Konferenz beitreten.",
+      "participants": "teilnehmer",
+      "status": {
+        "in_audio_conference": "in Audio Konferenz"
+      },
+      "type": {
+        "audio_conference": "Audio Konferenz",
+        "video_conference": "Video Konferenz"
+      },
+      "audio_conferences": "audiokonferenzen"
+    },
+    "current_calls": "laufende Gespräche",
+    "incoming": {
+      "incoming_from": "eingehendes Gespräch von {uri}",
+      "type": {
+        "audio_call": "Sprachanruf",
+        "video_call": "Videoanruf"
+      },
+      "auto_answer": {
+        "label": "Automatische Antwort ist aktiviert"
+      }
+    },
+    "info": {
+      "answered": "beantwortet",
+      "auto_answered": "Anruf automatisch beantworten",
+      "calling": "anrufen",
+      "connected": "verbunden",
+      "duration": "Dauer",
+      "failed": "fehlgeschlagen",
+      "history": "Anrufhistorie",
+      "in_progress": "in Bearbeitung",
+      "incoming_call": "eingehendes Gespräch",
+      "info": "Anruf Information",
+      "media_errors": {
+        "DevicesNotFoundError": "kein Audio oder Videogerät gefunden um das Gespräch zu initialisieren."
+      },
+      "no_answer": "keine Antwort",
+      "ringing": "läuten",
+      "tenant": "Nutzer",
+      "type": "Anruf Typ",
+      "types": {
+        "incoming": "eingehend",
+        "internal": "intern",
+        "outgoing": "ausgehend",
+        "transit": "weitergeleitet",
+        "undefined": "undefiniert"
+      }
+    },
+    "line": "Leitung {line}",
+    "loaders": {
+      "connecting": "verbinden"
+    },
+    "media_errors": {
+      "DevicesNotFoundError": "Kein Gerät zum Annehmen des Gesprächs angeschlossen."
+    },
+    "search_label": "Suche nach Name oder Telefonnummer.",
+    "current_call": "aktueller aufruf"
+  },
+  "chats": {
+    "add_contact_to_chat": "Kontakt hinzufügen und Chat starten.",
+    "attachments": {
+      "attachment": "Anhang | Anhänge",
+      "types": {
+        "image": "bild",
+        "audio": "audio",
+        "file": "datei"
+      }
+    },
+    "chat": "Chat | Chats",
+    "conversation": "Gespräch | Gespräche",
+    "conversation_actions": {
+      "clear": "Gesprächshistorie löschen.",
+      "delete": "löschen",
+      "load_more": "mehr laden"
+    },
+    "conversation_types": {
+      "sip_conversation": "SIP Gespräch",
+      "vitxi_conversation": "VitXi Gespräch"
+    },
+    "exceptions": {
+      "conversation": "leider ist ein Fehler beim Gespräch aufgetreten.",
+      "messages": "Kann keine Nachricht empfangen"
+    },
+    "message": "Nachricht",
+    "message_actions": {
+      "copy": "kopieren",
+      "delete": "löschen",
+      "forward": "vorwärts",
+      "reply": "antworten"
+    },
+    "message_rules": {
+      "sip_message_character_limit": "Maximum von 1023 Zeichen erlaubt."
+    },
+    "new_conversation": "Neues Gespräch",
+    "new_vitxi_message": "Neue Nachricht.",
+    "say_hello": "Sagen Sie Hallo",
+    "start_conversation": "Gespräch starten",
+    "start_sip_conversation": "Sagen Sie Hallo und starten Sie ein Gespräch.",
+    "start_vitxi_conversation": "Sagen Sie Hallo, senden Sie eine Datei und starten Sie ein Gespräch"
+  },
+  "contacts": {
+    "contact_info": {
+      "company": "Firma:  {source}",
+      "email": "email",
+      "info": "Kontaktinformationen",
+      "job_title": "Job Titel: {source}",
+      "type": "Typ: {source}",
+      "types": {
+        "external": "externer Kontakt",
+        "internal": "interner Kontakt"
+      }
+    },
+    "contacts": "Kontakt | Kontakte",
+    "create": {
+      "add": "Kontakt hinzufügen",
+      "errors": {
+        "save": "Fehler beim Kontakt"
+      },
+      "fields": {
+        "avatar": {
+          "label": "Avatar",
+          "limit_size_alert": "Avatar Größe bitte weniger als 2MB!",
+          "placeholder": "Avatar auswählen"
+        },
+        "company": "Firma",
+        "contact_type": "Kontaktart",
+        "contact_types": {
+          "external": "extern",
+          "internal": "intern"
+        },
+        "email": "email",
+        "first_name": "Vorname",
+        "job_title": "Titel",
+        "last_name": "Nachname",
+        "phone": {
+          "country": "Land",
+          "extension": "Durchwahl",
+          "invalid_number": "falsche Nummer",
+          "phone": "phone | Telefon",
+          "phone_number": "Nummer",
+          "prefix": "Prefix",
+          "type": "Typ",
+          "types": {
+            "alerts": {
+              "external": {
+                "content": "Wenn die Telefone extern sind, werden die Nachrichten (SMS) über die sms-Trunks gesendet, die vom Administrator konfiguriert und zugewiesen wurden.",
+                "title": "Externes Telefon"
+              },
+              "internal_sip": {
+                "content": "Wenn die Telefone intern agieren, die Nachrichten werden über die Telefonanlage gesendet. Die Nachrichten werden nur via Text versendet.",
+                "title": "Interner Telefonanschluss"
+              }
+            },
+            "external": "Extern",
+            "internal_sip": "Interner Telefonanschluss"
+          },
+          "add_phone": "telefon hinzufügen",
+          "required_phone": "muss mindestens ein Telefon hinzufügen"
+        }
+      },
+      "required_fields_alert": "Pflichtfeld angeben"
+    },
+    "no_contacts": "kein Kontakt erreichbar",
+    "actions": {
+      "favorites": {
+        "mark_as_favorite": "als Favorit markieren",
+        "unmark_as_favorite": "als Favorit unmarkieren"
+      }
+    },
+    "favorites": {
+      "favorites": "Favoriten"
+    }
+  },
+  "device": {
+    "actions": {
+      "refresh": "Erneuern"
+    },
+    "alerts": {
+      "not_found": "Das mit diesem Konto verknüpfte Gerät kann nicht registriert werden.\n Wenden Sie sich an den Administrator, um weitere Informationen zu erhalten."
+    },
+    "call_center": {
+      "active_queues": "Aktivierte Warteschlangen",
+      "alerts": {
+        "no_active_queues": "keine aktivierten Warteschlangen",
+        "no_queues_paused": "keine Warteschlangen aktiviert",
+        "success": {
+          "login": "Erfolgreich in die Warteschlange eingebucht.",
+          "logout": "erfolgreich ausgebucht",
+          "pause": "Deaktivierung erfolgreich",
+          "unpause": "erfolgreich aktiviert"
+        }
+      },
+      "default_reasons": {
+        "administrative": "Administrative",
+        "break": "Pause",
+        "lunch": "Frühstück",
+        "wc": "Toilette"
+      },
+      "manage": {
+        "tabs": {
+          "logged_in_queues": "Warteschlange eingeloggt",
+          "logged_out_queues": "Warteschlange ausgeloggt.",
+          "paused_queues": "Warteschlange deaktiviert"
+        }
+      },
+      "queue": "Warteschlange | Warteschlangen",
+      "queue_actions": {
+        "login": "login",
+        "login_all": "In alle einloggen",
+        "logout": "logout",
+        "logout_all": "von allen ausloggen",
+        "manage": "Manage",
+        "pause": "pause",
+        "pause_all": "alle deaktivieren",
+        "pause_section_title": "Auswahl der Warteschlange die Sie deaktivieren wollen",
+        "reload_queues": "Warteschlange erneuern",
+        "select_queues": "Auswahl Warteschlange",
+        "unpause": "Pause aus",
+        "unpause_all": "alle deaktivieren",
+        "unpause_section_title": "Auswahl der Warteschlange die Sie aktivieren wollen"
+      },
+      "queues_paused": "Warteschlange deaktiviert",
+      "reason": "Grund",
+      "tooltips": {
+        "is_active": "Aktiv in {count} Warteschlange",
+        "logged_out_queues": "{count} Ausgebuchte Warteschlange",
+        "logged_queues": "Einloggen in {count} Warteschlange.",
+        "login": "Warteschlange einbuchen",
+        "paused_queues": "{count} Deaktivierte Warteschlange."
+      }
+    },
+    "status": {
+      "registered": "Registriert",
+      "sending_registration": "Sende Registrierung",
+      "unregistered": "Unregistriert"
+    },
+    "disconnected": {
+      "reconnect": "neu verbinden.",
+      "reconnection_attempt": "Erneuter Versuch in",
+      "seconds": "sekunden",
+      "ssl_error": "Kontrolliere den Port{port} ist aktiviert:",
+      "title": "Die Verbindung zu Ihrem Server konnte nicht hergestellt werden."
+    },
+    "unregistered": {
+      "title": "Ihr Gerät ist nicht registriert. Wenden Sie sich bitte an den Administrator Ihrer Telefonanlage, damit Sie keine Anrufe verpassen.",
+      "try_register": "versuchen zu registrieren"
+    }
+  },
+  "directories": {
+    "directory": "Verzeichnis | Verzeichnisse",
+    "info": {
+      "actions": "Aktion",
+      "email": "Email",
+      "home_number": "Privat",
+      "job_title": "Titel",
+      "mobile_number": "Mobilnummer",
+      "name": "Name",
+      "organization": "Firma",
+      "telephone": "Telefon"
+    },
+    "loading": "Lade Kontakte",
+    "no_assigned": "Kein Telefonbuch zugewiesen.",
+    "no_contacts": "keine Daten vorhanden"
+  },
+  "export": {
+    "alerts": {
+      "success": "Die Daten wurden erfolgreich exportiert"
+    }
+  },
+  "footer": {
+    "copyright": "{app_name} Omnichannel Communication System - {company} Copyright © {year}",
+    "documentation": "Dokumentation und Information",
+    "slogan": "Wir verbinden Menschen."
+  },
+  "globals": {
+    "actions": {
+      "back": "zurück",
+      "cancel": "Abbruch",
+      "create": {
+        "create": "erstellen",
+        "success": "der {source} wurde erfolgreich erstellt"
+      },
+      "delete": {
+        "delete": "löschen",
+        "success": "der {source} wurde erfolgreich gelöscht"
+      },
+      "done": "fertig",
+      "edit": "bearbeiten",
+      "export": "Export",
+      "import": "Import",
+      "reset": "zurückstellen",
+      "restart": "Neustart",
+      "save": "sichern",
+      "update": {
+        "success": "der {source} wurder erfolgreich erneuert.",
+        "update": "erneuern"
+      }
+    },
+    "alerts": {
+      "actions": {
+        "close": "Schliessen",
+        "ok": "ok",
+        "view": "Ansicht"
+      },
+      "avatar": {
+        "invalid_file_size": "Ihre Datei ist zu groß. Bitte wählen Sie eine Datei unter 2MB.",
+        "invalid_file_type": "Ihre Datei ist beschädigt."
+      },
+      "confirm": {
+        "delete": {
+          "content": "Sind Sie sicher das Sie den{source} löschen wollen?",
+          "title": "Löschen {name}"
+        }
+      },
+      "dev_console_alert_content": "Diese Browserfunktion ist für Entwickler gedacht. Wenn Sie jemand angewiesen hat, etwas hier zu kopieren und einzufügen, um eine Funktion zu aktivieren, ist dies ein Betrug. Wenn Sie dies tun, kann diese Person auf Ihr Konto zugreifen.",
+      "dev_console_alert_title": "Stop!",
+      "restart_app": {
+        "message": "Einige Erneuerungen werden erst bei einem Neustart des {app_name} übernommen.",
+        "title": "{app_name}"
+      }
+    },
+    "email": "Email",
+    "invalid_file": "Wählen Sie bitte eine andere Datei aus.",
+    "loaders": {
+      "creating": "erstellen",
+      "deleting": "löschen",
+      "loading": "laden",
+      "updating": "erneuern"
+    },
+    "max_file_size_exceeded": "Ihre Datei ist zu groß. Bitte wählen Sie eine unter 10MB aus.",
+    "name": "Name",
+    "no_extension": "Sie haben keine Durchwahl zugewiesen.",
+    "no_results": "keine Ergebnisse gefunden",
+    "not_available": "nicht erreichbar",
+    "order_by": {
+      "options": {
+        "date": "Datum",
+        "name": "Name"
+      }
+    },
+    "password": "Passwort",
+    "required": "erforderlich",
+    "rules": {
+      "email": "Gültige Email."
+    },
+    "search": "Suche",
+    "search_source": "Suche {source}",
+    "sort_by": {
+      "options": {
+        "asc": "aufsteigend",
+        "desc": "absteigend"
+      }
+    },
+    "suggestions": "Anregungen",
+    "unknown": "unbekannt",
+    "username": "Benutzername"
+  },
+  "ice_servers": {
+    "actions": {
+      "add_server": {
+        "label": "Server hinzufügen"
+      },
+      "remove_server": {
+        "label": "Server entfernen"
+      }
+    },
+    "alerts": {
+      "error": "Konfiguration Update fehlgeschlagen. Bitte überprüfen Sie die Daten und versuchen Sie es erneut.",
+      "success": "Die Einstellungen wurden erfolgreich übernommen."
+    },
+    "connectivity": {
+      "checking": "Verbindung überprüfen.",
+      "failed": "Serverfehler",
+      "success": "Verbindung Server erfolgreich."
+    },
+    "description": "Diese Konfiguration Geben Sie die URLs der Server an, die für ICE-Aushandlungen verwendet werden sollen. In der Regel handelt es sich um STUN- und/oder TURN-Server.\n\nDies ist eine globale Einstellung, und Sie müssen zwei URLs angeben.",
+    "fields": {
+      "credential": {
+        "label": "Berechtigung"
+      },
+      "url": {
+        "label": "STUN or TURN URI"
+      },
+      "username": {
+        "label": "Benutzername"
+      }
+    },
+    "module_name": "ICE servers",
+    "servers": "server | server"
+  },
+  "import": {
+    "actions": {
+      "download_template": "Download Vorlage Import",
+      "remove_file": "Datei löschen."
+    },
+    "alerts": {
+      "failed": "ein Fehler wurde beim importieren festgestellt."
+    }
+  },
+  "login": {
+    "copyright": "Powered by {company} © {year} . All rights reserved.",
+    "loginButton": "Login",
+    "loginError": "Falscher Benutzer oder Passwort",
+    "password_reset": {
+      "change": "Passwort erneuern",
+      "forgot_password": "Passwort vergessen?",
+      "reset": "Passwort zurücksetzen"
+    },
+    "username_or_email": "Benutzernamen oder E-Mail"
+  },
+  "mail_settings": {
+    "alerts": {
+      "error": "Kann Daten nicht updaten. überprüfen Sie die Eingabe und versuchen Sie es erneut.",
+      "success": "Die Daten wurden erfolgreich erneuert."
+    },
+    "description": "Kofnigurieren Sie Ihren Mailserver, sodass Emails über die Anwendung versendet werden künnen.",
+    "fields": {
+      "bcc_mail": {
+        "label": "Blindkopie"
+      },
+      "encryption": {
+        "label": "Verschlüsselung"
+      },
+      "from_address": {
+        "label": "von Adresse"
+      },
+      "from_name": {
+        "label": "von Namen"
+      },
+      "host": {
+        "hint": "",
+        "host": "Host"
+      },
+      "password": {
+        "label": "Passwort"
+      },
+      "port": {
+        "hint": "",
+        "port": "Port"
+      },
+      "test": {
+        "label": "Testmail senden."
+      },
+      "type": {
+        "label": "Type",
+        "options": {
+          "smtp": "Smtp"
+        }
+      },
+      "username": {
+        "label": "Benutzername"
+      }
+    },
+    "module_name": "mail settings",
+    "pbx_status": {
+      "checking_connection": "Verbindung überprüfen",
+      "connected": "verbunden",
+      "disconnected": "nicht verbunden"
+    },
+    "test": {
+      "alerts": {
+        "failed": "das Email konnte nicht versendet werden.",
+        "success": "das Email wurde erfolgreich versendet."
+      }
+    }
+  },
+  "main_menu": {
+    "about": "Über",
+    "administration": {
+      "groups": "Gruppe",
+      "menu_name": "Verwaltung",
+      "presence_status": "Anwesenheitsstatus",
+      "sms_provider": "SMS Provider",
+      "users_manager": "Benutzer"
+    },
+    "logout": "Ausloggen",
+    "settings": "Einstellungen"
+  },
+  "misc": {
+    "active": "Aktiv",
+    "add": "Hinzufügen",
+    "all": "alle",
+    "dial": "Wählen",
+    "error_title": "ein Fehler wurde festgestellt",
+    "filter_by_name": "Sortiert nach Namen",
+    "hello": "Hallo, {user_name}",
+    "main_tenant": "Hauptnutzer",
+    "more": "mehr",
+    "no_data": "keine Daten zum Anzeign",
+    "order_by": "auftrag von",
+    "paused": "Deaktiviert",
+    "try_again": "Neu versuchen",
+    "welcome": "Willkommen bei {app_name}",
+    "welcome_features_section_title": "Bleiben Sie in Verbindung mit {app_name}",
+    "yesterday": "Gestern",
+    "you": "Sie",
+    "cause": "verursachen",
+    "preferences": "einstellungen",
+    "pwa": {
+      "actions": {
+        "install": "installieren",
+        "not_now": "nicht jetzt"
+      },
+      "promote_install": "Mit unserer App finden Sie schneller, was Sie brauchen!"
+    },
+    "server_connection": {
+      "connection_error": {
+        "suggestion": "Bitte wenden Sie sich an den Administrator.",
+        "title": "Die Verbindung zu Ihrem Server konnte nicht hergestellt werden."
+      }
+    }
+  },
+  "pbx_settings": {
+    "alerts": {
+      "error": " Eine Einstellung konnte nicht übernommen werden, weil ein Update fehlgeschlagen ist. Bitte ergänzen sie die Daten und versuchen Sie nochmal.",
+      "success": "Die Daten wurden erfolgreich übernommen."
+    },
+    "description": "Richten Sie relevante Daten ein, um eine Verbindung zu Ihrer PBX-Anlage herzustellen. Diese Informationen sind notwendig, um die Erweiterungen von ihren Benutzern, Voicemail, Anrufverlauf und andere Merkmale zu registrieren.",
+    "fields": {
+      "host": {
+        "hint": "",
+        "host": "Host"
+      },
+      "key": {
+        "edit": "Schlüssel bearbeiten",
+        "hint": "",
+        "key": "Schlüssel"
+      },
+      "pjsip_port": {
+        "hint": "Portkonfiguration für die Durchwahl Registrierung",
+        "pjsip_port": "PJSIP port"
+      },
+      "port": {
+        "hint": "",
+        "port": "Port"
+      },
+      "secure": {
+        "hint": "",
+        "secure": "Sicherheit"
+      },
+      "wss_port": {
+        "hint": "Wenn eine Firewall benutzt wird, bitten den TCP Port, um eine Verbindung herstellen zu können.",
+        "wss_port": "WSS port"
+      }
+    },
+    "module_name": "Telefonanlagen Einstellungen",
+    "pbx_status": {
+      "checking_connection": "Überprüfung der Verbindung.",
+      "connected": "verbunden",
+      "disconnected": "nicht verbunden"
+    }
+  },
+  "recordings": {
+    "not_allowed": "Sie haben nicht die Berechtigung hier Einstellungen zu machen.",
+    "recording": "Aufnahme | Aufnahmen"
+  },
+  "right_menu": {
+    "check_updates": "Überprüfung auf Updates",
+    "logout": "Ausloggen",
+    "settings": "Einstellungen",
+    "troubleshooting": "fehlersuche",
+    "reset_app_data": "App-Daten zurücksetzen",
+    "toggle_desktop_app_size": {
+      "mobile": "mobile Ansicht",
+      "desktop": "Standardansicht"
+    }
+  },
+  "settings": {
+    "account": {
+      "account": "Konto",
+      "password": {
+        "alerts": {
+          "error": "das Passwort wurde nicht geändert.",
+          "no_match_old_password": "das Passwort stimmt nicht überein.  ",
+          "password_error": "Passwort bestätigen",
+          "success": "das Passwort wurde erfolgreich geändert."
+        },
+        "change_password": "Passwort ändern",
+        "fields": {
+          "new_password": {
+            "label": "neues Passwort",
+            "rules": {
+              "required": "neues Passwort ist erforderlich"
+            }
+          },
+          "password": {
+            "label": "derzeitiges Passwort",
+            "rules": {
+              "required": "derzeitiges Passwort ist erforderlich"
+            }
+          },
+          "password_confirmation": {
+            "password_confirmation": "Bestätigung des Passworts",
+            "rules": {
+              "no_match": "Passwort stimmt nicht überein.",
+              "required": "Passwort Bestätigung ist erforderlich"
+            }
+          }
+        },
+        "set_new_password": "Passwort neu setzen."
+      }
+    },
+    "actions": {
+      "save": "Sichern"
+    },
+    "alert": {
+      "error": "Ein Fehler ist während des speichern aufgetreten.",
+      "success": "Einstellungen wurden gespeichert."
+    },
+    "application": {
+      "fields": {
+        "auto_launch": {
+          "description": "Automatischer Start der Anwendung bei Start des Betriebssystem",
+          "label": "Anwendung automatischer Start"
+        },
+        "hardware_acceleration": {
+          "label": "Deaktivierung Hardwarebeschleunigung (Erfordert einen Restart von {app_name} )"
+        },
+        "host": {
+          "label": "Eingabe des Host wo {app_name}  installiert wird (Erfordert einen Restart von {app_name})",
+          "placeholder": "your-pbx.com"
+        },
+        "keep_app_on_close": {
+          "label": "Beim schliessen wird die Anwendung im Hintergrund weitergeführt."
+        },
+        "open_as_hidden": {
+          "description": "Führen Sie die Anwendung beim automatischen Start als verborgen aus.",
+          "label": "Öffnen der Anwendung als verborgen."
+        }
+      },
+      "tab_name": "Anwendung"
+    },
+    "audio": {
+      "audio": "Audio",
+      "echo_cancellation": {
+        "description": "Funktion zur Unterdrückung von Echo Effekten",
+        "echo_cancellation": "Echo Unterdrückung"
+      },
+      "noise_suppression": {
+        "description": "Automatische Filterung von Hintergrund Geräuschunterdrückung.",
+        "noise_suppression": "Geräuschunterdrückung"
+      },
+      "volume": {
+        "description": "Diese Konfiguration wird auf die Klingeltöne von Anrufen und andere Sounds der Anwendung angewendet.",
+        "label": "Lautstärke"
+      }
+    },
+    "call_center": {
+      "call_center": "Call Center",
+      "log_into_queues_on_startup": {
+        "description": "Automatisches Einloggen in eine bestehende Warteschleife während das Programm startet.",
+        "label": "Einloggen in die Warteschleife während des Startens"
+      },
+      "log_out_from_queues_when_closing_the_app": {
+        "label": "Ausloggen aus der Warteschlange während das Programm geschlossen wird."
+      },
+      "open_crm_url": {
+        "description": "Falls in Ihrem Agentenprofil eine CRM-URL konfiguriert ist, wählen Sie aus, wie die URL in Ihrem Browser geöffnet werden soll.",
+        "label": "Starten der CRM Url:",
+        "options": {
+          "new_tab": {
+            "label": "Neuer Tab"
+          },
+          "new_window": {
+            "label": "Neues Fenster",
+            "support_alert": "Diese Option unterliegt Browser- und Betriebssystemberechtigungen."
+          }
+        }
+      }
+    },
+    "calls": {
+      "call": "Anrufe",
+      "call_history_limit": {
+        "call_history_limit": "Anruf Aufzeichnungslimit",
+        "description": "Begrenzung der Limits von Aufnahmen in Ihrem Anruf Journal."
+      },
+      "calls": "Anrufe",
+      "ringtone": {
+        "description": "Klingelton für eingehende Anrufe",
+        "ringtone": "Klingelton"
+      },
+      "auto_answer": {
+        "label": "automatische Antwort",
+        "modes": {
+          "instant": "Automatische Sofortantwort",
+          "after": "Automatische Antwort nach (1 - 600 Sekunden)"
+        },
+        "rules": {
+          "timer": "die Zahl muss zwischen 1 und 600 liegen"
+        }
+      }
+    },
+    "devices": {
+      "audio": "Audio",
+      "camera": "Kamera",
+      "default": {
+        "camera": "Standard Kamera",
+        "microphone": "Standard Mikrofon",
+        "speaker": "System Standard Lautsprecher"
+      },
+      "device_placeholder": "Geräteauswahl",
+      "devices": "Geräte",
+      "devices_selection": {
+        "input_device": {
+          "label": "Eingabegerät"
+        },
+        "input_speaker": {
+          "label": "Eingabe Lautsprecher"
+        },
+        "output_device": {
+          "label": "Ausgabegerät"
+        },
+        "output_speaker": {
+          "label": "Ausgabe Lautsprecher"
+        },
+        "ringing_device": {
+          "label": "Klingelvorrichtung"
+        }
+      },
+      "microphone": "Mikrofon",
+      "no_devices_available": "kein Gerät erkannt",
+      "speaker": "Lautsprecher"
+    },
+    "general": {
+      "dark_mode": {
+        "dark_mode": "Dunkler Modus",
+        "description": "Einstellungen wechseln auf dunklen Modus"
+      },
+      "general": "Allgemein",
+      "push_notifications": {
+        "description": "Desktop-Benachrichtigungen für bestimmte Ereignisse erhalten",
+        "push_notifications": "Desktop Benachrichtigung"
+      },
+      "timezone": {
+        "description": "Lokale Zeit für die Region oder Land.",
+        "timezone": "Zeitzone"
+      }
+    },
+    "presence": {
+      "additional_information": {
+        "additional_information": "zusätzliche Informationen",
+        "description": "zusätzliche Nachricht für Ihren Anwesenheitsstatus",
+        "label": "Anwesenheitsstatus Nachricht"
+      },
+      "presence": "Anwesenheit",
+      "presence_status": {
+        "description": "Wählen Sie einen Status aus.",
+        "presence_status": "Anwesenheitsstatus"
+      }
+    },
+    "profile": {
+      "extension": {
+        "extension": "Durchwahl"
+      },
+      "full_name": {
+        "full_name": "Voller Name"
+      },
+      "profile": "Profil",
+      "profile_picture": {
+        "crop": {
+          "label": "Foto anpassen",
+          "preview": "Vorschau"
+        },
+        "profile_picture": "Profilbild",
+        "tabs": {
+          "current_picture": "aktuelles Bild",
+          "take_photo": "Foto übernehmen.",
+          "upload_photo": "Upload Foto"
+        },
+        "take_photo": {
+          "label": "Foto übernehmen"
+        },
+        "upload_photo": {
+          "drag": "Profilbild bitte hierher ziehen.",
+          "label": "Datei ablegen oder per Klick hochladen",
+          "mobile_label": "auswählen zum hochladen",
+          "select": "Auswahl eines Bildes vom PC"
+        }
+      },
+      "username": {
+        "username": "Benutzername"
+      }
+    },
+    "settings": "Einstellungen",
+    "video": {
+      "frame_rate": {
+        "description": "Auswahl der frame rate, in frames per second",
+        "frame_rate": "Frame rate"
+      },
+      "max_aspect_ratio": {
+        "description": "Einstellen Bilddiagonale video",
+        "max_aspect_ratio": "maximales Seitenverhältnis"
+      },
+      "resize_mode": {
+        "description": "Einstellung der Auflösung.",
+        "options": {
+          "crop_and_scale": "Zuschneiden und skalieren.",
+          "none": "keine"
+        },
+        "resize_mode": "Größenänderung Einstellung"
+      },
+      "video": "Video"
+    }
+  },
+  "shortcuts": {
+    "label": "Tastenkombinationen",
+    "shortcuts": {
+      "answer_incoming_call": {
+        "description": "eingehenden Anruf beantworten"
+      },
+      "decline_incoming_call": {
+        "description": "eingehenden Anruf ablehnen"
+      },
+      "end_call": {
+        "description": "Beenden eines Anrufs oder einer Telefonkonferenz(auflegen allen Teilnehmern)."
+      },
+      "make_call": {
+        "description": "Anruf tätigen",
+        "tooltip": "Anruf tätigen, zu der angezeigten Nummer, Kontakt oder Durchwahl"
+      },
+      "toggle_camera": {
+        "description": "Umschaltung auf Video bei Anruf"
+      },
+      "toggle_dialpad": {
+        "description": "Wähltastatur"
+      },
+      "toggle_hold": {
+        "description": "Halten oder fortsetzen Sie einen Anruf, wenn der Fokus auf dem Anrufbereich liegt"
+      },
+      "toggle_mute_audio": {
+        "description": "Stummschaltung"
+      },
+      "transfer_call": {
+        "description": "Verbinden Sie einen Anruf, wenn der Fokus auf dem Anrufbereich liegt."
+      }
+    }
+  },
+  "users": {
+    "all_groups": "Alle Gruppen",
+    "groups": {
+      "members": "Mitglied | Mitglieder"
+    },
+    "has_no_extension": "hat keine Durchwahl",
+    "no_users": "kein Benutzer erreichbar",
+    "users": "Benutzer | Benutzer",
+    "options": {
+      "sort_by": {
+        "label": "sortierung nach benutzern online"
+      }
+    },
+    "status": {
+      "in_call": "auf Abruf",
+      "on_the_phone": "am Telefon",
+      "available": "verfügbar"
+    }
+  },
+  "voice_messages": {
+    "no_messages": "Sie haben keine neuen Nachrichten",
+    "not_found": "keine Nachricht gefunden.",
+    "types": {
+      "inbox": "neu",
+      "old": "alt",
+      "urgent": "wichtig"
+    },
+    "voice_message": "Sprachnachricht | Sprahnachrichten",
+    "voicemail_count": "Sie haben keine Sprachnachrichten | Sie haben {count} Sprachnachricht | You haben {count} Sprachnachrichten"
+  },
+  "wizard": {
+    "actions": {
+      "continue": "Weiter",
+      "finish": "Beenden",
+      "next": "Nächstes",
+      "previous": "Zurück"
+    },
+    "steps": {
+      "database_setup": {
+        "error": "Keine Verbindung. Bitte überprüfen Sie Ihre Einstellungen.",
+        "fields": {
+          "password": {
+            "label": "Datenbank Passwort",
+            "placeholder": "Passwort"
+          },
+          "username": {
+            "label": "Datenbank Benutzername",
+            "placeholder": "root"
+          }
+        },
+        "info": "Eingabe Benutzer mit Berechtigung zum installieren der Anwendungsdatenbank.",
+        "loading_message": "Installation Datenbank, bitte warten.....",
+        "step_name": "Installation Datenbank"
+      },
+      "pbx_settings": {
+        "fields": {
+          "host": {
+            "label": "host",
+            "placeholder": "localhost"
+          },
+          "key": {
+            "hint": "Wenn Sie auf dem selben Server wie {company} installieren lassen Sie bitte das Feld leer. Ein Schlüssel wird automatisch erstellt.",
+            "label": "Anwendungsschlüssel",
+            "placeholder": "Anwendungsschlüssel"
+          },
+          "port": {
+            "label": "port",
+            "placeholder": "80"
+          },
+          "secure": {
+            "hint": "Verbindung über HTTPS. Normalerweise aktivieren Sie diese Option, wenn Sie Port 443 verwenden.",
+            "label": "Sicherheit"
+          }
+        },
+        "loading_message": "Verbindung wird überprüft. Bitte warten....",
+        "step_name": "Telefonanlage Einstellungen"
+      },
+      "user_setup": {
+        "error": "Kann kein Benutzer angelegt werden. Bitte überprüfen Sie die Einstellungen",
+        "fields": {
+          "name": {
+            "label": "Name",
+            "placeholder": "Helmut Mustermann"
+          },
+          "password": {
+            "hint": "",
+            "label": "Benutzerpasswort",
+            "placeholder": "Passwort"
+          },
+          "password_confirmation": {
+            "label": "Passwort Bestätigung",
+            "placeholder": "Passwort wiederholen"
+          },
+          "timezone": {
+            "label": "Zeitzone"
+          },
+          "username": {
+            "label": "Benutzername",
+            "placeholder": "admin"
+          }
+        },
+        "loading_message": "erstellen...",
+        "step_name": "Benutzer erstellen"
+      }
+    }
+  }
+}

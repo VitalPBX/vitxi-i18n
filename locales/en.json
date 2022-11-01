@@ -1,0 +1,1267 @@
+{
+  "about": {
+    "app_name": "{app_name} Omnichannel Communication System",
+    "information": "{app_name} is a full WebRTC client with all of the features you need.",
+    "features": {
+      "calls": "audio & video calls",
+      "chats": "chat with your team members",
+      "transfer_calls": "blind and attended transfer"
+    }
+  },
+  "administration": {
+    "groups": {
+      "description": "With the purpose that the {app_name} users become visible between each other, it is necessary that each user has a group assigned to them, and afterwards, we give access to other users to see this group. This way, you can create multiple groups of users limiting them on which groups they can see. For this, we first create the group name.",
+      "errors": {
+        "groups": "The groups could not be loaded",
+        "tenants": "The tenants could not be loaded"
+      },
+      "fields": {
+        "description": "description",
+        "name": "name",
+        "tenant": "tenant"
+      },
+      "group": "group | groups",
+      "module_name": "groups",
+      "rules": {
+        "name": "group name is required",
+        "tenant": "tenant is required"
+      }
+    },
+    "module_name": "administration",
+    "presence": {
+      "description": "Here, the system administrator can create the different presence status that users can use. By default, there are five (5) status which are, Available, Do Not Disturb, Lunch Break, and Business Trip, however, you can add more.",
+      "info": {
+        "default_status": "Default statuses cannot be edited or deleted."
+      },
+      "module_name": "presence status",
+      "offline": "offline",
+      "online": "online",
+      "select_icon": "select icon",
+      "status": {
+        "available": "available",
+        "away": "away",
+        "business_trip": "business trip",
+        "do_not_disturb": "do not disturb",
+        "lunch_break": "lunch break"
+      },
+      "status_color": "status color"
+    },
+    "social_networks": {
+      "description": "Here, you can configure the social media that will appear on the footer.",
+      "module_name": "social networks",
+      "socials": {
+        "facebook": {
+          "hint_text": "Set the username of your facebook page",
+          "prefix": "https://facebook.com/"
+        },
+        "instagram": {
+          "hint_text": "Set the username for your Instagram account",
+          "prefix": "https://instagram.com/"
+        },
+        "twitter": {
+          "hint_text": "Set the username for your twitter account",
+          "prefix": "https://twitter.com/"
+        },
+        "youtube": {
+          "hint_text": "Set the username of your youtube channel",
+          "prefix": "https://youtube.com/"
+        }
+      }
+    },
+    "user_manager": {
+      "description": "create the different users for {app_name}. Manage their extensions and permissions from this module.",
+      "error_on_delete": "It is not allowed to delete the only user from the application",
+      "module_name": "user manager",
+      "sections": {
+        "details": {
+          "change_password": "change user password (optional)",
+          "permissions": "permissions",
+          "role": "role",
+          "section_name": "user details",
+          "validations": {
+            "name": "name is required",
+            "password": "the password must be a minimum of 8 characters",
+            "role": "user role is required",
+            "username": "username is required"
+          },
+          "role_with_call_center_features": "the role has call center features."
+        },
+        "device": {
+          "can_view_recordings": "User can view their recordings",
+          "device": "extension",
+          "device_not_found": "The assigned device, {source}, has not been found on the PBX or is not available.",
+          "group_module_info": "No groups detected for the selected tenant, you can create a group here:",
+          "groups": "groups",
+          "groups_hint": "establish which groups the user belongs to",
+          "no_devices": "no devices available",
+          "no_phonebooks": "no phonebooks available",
+          "phonebooks": "phonebooks",
+          "phonebooks_hint": "select the phonebooks to assing",
+          "remove_device": "remove the assigned device",
+          "section_name": "user data",
+          "tenant": "tenant",
+          "validations": {
+            "device": "please select the device to assing",
+            "phonebooks": "please select the phonebooks to assing",
+            "tenant": "please select the tenant to assing"
+          },
+          "group_placeholder": "select a group"
+        }
+      },
+      "user": "user | users",
+      "user_already_exists": "Username already exist."
+    },
+    "role_manager": {
+      "module_name": "role manager",
+      "description": "edit or create custom roles and assign permissions according to the roles that users will perform.",
+      "permissions": {
+        "label": "permission | permissions",
+        "permissions": {
+          "assigned-tenant": "assigned tenant",
+          "misc": {
+            "group_name": "miscellaneous",
+            "update_social_networks": {
+              "label": "update social networks",
+              "description": "permission to configure the social networks that will appear in the footer."
+            },
+            "view-recordings": {
+              "label": "view recordings",
+              "description": "the user will be able to see their call recordings generated by the PBX"
+            }
+          },
+          "management": {
+            "group_name": "management",
+            "users": {
+              "label": "users",
+              "description": "check this option if you want to allow access to the users module."
+            },
+            "roles": {
+              "label": "roles",
+              "description": "check this option if you want to allow access to the roles module."
+            },
+            "agent-profiles": {
+              "label": "agent profiles",
+              "description": "check this option if you want to allow access to the agent profiles module"
+            }
+          },
+          "call-center": {
+            "call-center-features": {
+              "label": "call center features",
+              "description": "call center features such as login and logout in queues are enabled."
+            },
+            "group_name": "call center",
+            "queue-selection": {
+              "label": "queue selection",
+              "description": "when this option is checked, the agent will be able to select the queue(s) they will log into. If unselected, they will log into all the queues they belong to."
+            }
+          }
+        },
+        "select_all": "select all",
+        "unselect": "unselect"
+      },
+      "full_access": "full access",
+      "role": "role | roles",
+      "agent_profile": {
+        "hint": "* assign an agent profile to be used in case the assigned role has call center permissions."
+      },
+      "default_roles": {
+        "super-admin": "super administrator",
+        "admin": "tenant administrator",
+        "user": "user",
+        "agent": "agent"
+      }
+    },
+    "agent_profiles": {
+      "module_name": "agent profiles",
+      "agent_pauses_reason": {
+        "label": "reasons for pauses",
+        "description": "pause reasons used when an agent pauses a session in queues",
+        "fields": {
+          "name": "name"
+        },
+        "pause": "pause | pauses",
+        "rules": {
+          "name": "the name of the reason is required"
+        }
+      },
+      "description": "create agent profiles in which you can set reasons for pauses. Profiles can be assigned to user roles",
+      "profile": "profile | profiles",
+      "agent_profile": "agent profile",
+      "default_profile_alert": "the default profile cannot be deleted.",
+      "fields": {
+        "is_global": {
+          "label": "is global",
+          "description": "if checked, the profile can be occupied by any of the tenants."
+        },
+        "crm_url": {
+          "label": "CRM URL (optional)",
+          "description": "configure an endpoint of your CRM to save data from a call.",
+          "actions": {
+            "add_parameter": "add parameter",
+            "remove_parameter": "remove parameter"
+          },
+          "fields": {
+            "base_url": {
+              "label": "base URL",
+              "invalid": "URL is not valid"
+            },
+            "parameter_name": {
+              "label": "parameter name",
+              "placeholder": "https://your-crm.com"
+            },
+            "value": {
+              "label": "value"
+            },
+            "dynamic_call_values": {
+              "call_type": {
+                "label": "call type"
+              },
+              "queue": {
+                "label": "queue"
+              },
+              "caller_id_name": {
+                "label": "caller name"
+              },
+              "caller_id_number": {
+                "label": "caller number"
+              },
+              "callee_name": {
+                "label": "callee name"
+              },
+              "callee_number": {
+                "label": "callee number"
+              }
+            }
+          },
+          "preview": "URL preview"
+        },
+        "website_tab": {
+          "label": "custom website tab",
+          "hint": "add a custom tab to the app with an embedded website",
+          "tab_name": {
+            "label": "tab name"
+          },
+          "url": {
+            "label": "web url",
+            "hint": "Enter a secure web site (https://) that you can trust. This is important to keep your users safe."
+          },
+          "preview": "preview"
+        }
+      }
+    },
+    "manage": "manage"
+  },
+  "calls": {
+    "actions": {
+      "answer": "answer",
+      "audio_answer": "audio answer",
+      "cancel_share_screen": "cancel share screen",
+      "disable_camera": "disable camera",
+      "enable_camera": "enable camera",
+      "hang_up": "hang up",
+      "make_call": "make call",
+      "mute_audio": "mute audio",
+      "mute_video": "mute video",
+      "reject": "reject",
+      "share_screen": "share screen",
+      "transfer": {
+        "label": "type a number to transfer",
+        "transfer": "transfer",
+        "type": {
+          "blind": "blind",
+          "attended": "attended"
+        },
+        "alerts": {
+          "request_succeeded": "request succeeded",
+          "request_failed": "request failed",
+          "trying": "trying",
+          "progress": "in progress",
+          "accepted": "accepted",
+          "failed": "failed",
+          "success": "successful transfer"
+        },
+        "complete_transfer": "complete transfer"
+      },
+      "unmute_audio": "unmute audio",
+      "video_answer": "video answer",
+      "hold": {
+        "hold": "set on hold",
+        "unhold": "resume call"
+      },
+      "keypad": "keypad",
+      "crm": {
+        "label": "CRM"
+      },
+      "call": "call"
+    },
+    "call": "call | calls",
+    "incoming": {
+      "incoming_from": "incoming call from {uri}",
+      "type": {
+        "audio_call": "audio call",
+        "video_call": "video call"
+      },
+      "auto_answer": {
+        "label": "auto answer is enabled"
+      }
+    },
+    "info": {
+      "answered": "answered",
+      "calling": "calling",
+      "duration": "duration",
+      "failed": "failed",
+      "history": "call history",
+      "incoming_call": "Incoming call",
+      "info": "call information",
+      "media_errors": {
+        "DevicesNotFoundError": "no audio or video devices detected to initialize the call"
+      },
+      "no_answer": "no answer",
+      "tenant": "tenant",
+      "type": "call type",
+      "types": {
+        "incoming": "incoming",
+        "internal": "internal",
+        "outgoing": "outgoing",
+        "transit": "transit",
+        "undefined": "undefined"
+      },
+      "in_progress": "in progress",
+      "connected": "connected",
+      "ringing": "ringing",
+      "auto_answered": "call answered automatically"
+    },
+    "loaders": {
+      "connecting": "connecting"
+    },
+    "media_errors": {
+      "DevicesNotFoundError": "no audio or video devices were detected to initialize the call"
+    },
+    "current_calls": "current calls",
+    "line": "line {line}",
+    "conference": {
+      "conference": "conference",
+      "type": {
+        "audio_conference": "audio conference",
+        "video_conference": "video conference"
+      },
+      "add_participant": "add participant",
+      "join_call": "join conference call",
+      "actions": {
+        "end_conference": "end conference",
+        "end_conference_and_hang_up": "end the conference and hang up the calls",
+        "start_conference": "start conference",
+        "start_audio_conference": "start audio conference"
+      },
+      "status": {
+        "in_audio_conference": "in audio conference"
+      },
+      "participants": "participants",
+      "audio_conferences": "audio conferences"
+    },
+    "search_label": "search by name or enter a number",
+    "current_call": "current call"
+  },
+  "chats": {
+    "add_contact_to_chat": "add a contact to start chatting",
+    "chat": "chat | chats",
+    "conversation": "conversation | conversations",
+    "conversation_actions": {
+      "clear": "clear conversation history",
+      "delete": "delete",
+      "load_more": "load more"
+    },
+    "conversation_types": {
+      "sip_conversation": "SIP conversation",
+      "vitxi_conversation": "VitXi conversation"
+    },
+    "message": "message",
+    "message_actions": {
+      "copy": "copy",
+      "delete": "delete",
+      "forward": "forward",
+      "reply": "reply"
+    },
+    "message_rules": {
+      "sip_message_character_limit": "a maximum of 1023 characters is allowed"
+    },
+    "new_conversation": "new conversation",
+    "new_vitxi_message": "new Message",
+    "start_conversation": "start a conversation",
+    "start_sip_conversation": "Say hello and start a conversation!",
+    "start_vitxi_conversation": "Say hello or share a file and start a conversation!",
+    "attachments": {
+      "attachment": "attachment | attachments",
+      "types": {
+        "image": "image",
+        "audio": "audio",
+        "file": "file"
+      }
+    },
+    "exceptions": {
+      "conversation": "there was an error getting the conversation.",
+      "messages": "could not get messages"
+    },
+    "say_hello": "say hello"
+  },
+  "contacts": {
+    "contact_info": {
+      "company": "company:  {source}",
+      "email": "email",
+      "info": "contact information",
+      "job_title": "job title: {source}",
+      "type": "type: {source}",
+      "types": {
+        "internal": "internal contact",
+        "external": "external contact"
+      }
+    },
+    "contacts": "contact | contacts",
+    "create": {
+      "add": "add contact",
+      "errors": {
+        "save": "error on add contact"
+      },
+      "fields": {
+        "avatar": {
+          "label": "avatar",
+          "limit_size_alert": "Avatar size should be less than 2 MB!",
+          "placeholder": "pick an avatar"
+        },
+        "company": "company",
+        "contact_type": "contact type",
+        "contact_types": {
+          "external": "external",
+          "internal": "internal"
+        },
+        "email": "email",
+        "first_name": "first name",
+        "job_title": "job title",
+        "last_name": "last name",
+        "phone": {
+          "country": "country",
+          "extension": "extension",
+          "invalid_number": "invalid number",
+          "phone": "phone | phones",
+          "phone_number": "number",
+          "prefix": "prefix",
+          "type": "type",
+          "types": {
+            "alerts": {
+              "external": {
+                "content": "When the telephones are external, the messages (SMS) will be sent through the SMS trunks configured and assigned by the administrator.",
+                "title": "External phone"
+              },
+              "internal_sip": {
+                "content": "When the phones are of the \"Internal SIP\" type, the messages will be sent through Asterisk. The messages are only text type.",
+                "title": "internal (SIP)"
+              }
+            },
+            "external": "external",
+            "internal_sip": "internal (SIP)"
+          },
+          "add_phone": "add phone",
+          "required_phone": "must add at least one phone"
+        }
+      },
+      "required_fields_alert": "indicates required field"
+    },
+    "no_contacts": "no contacts available",
+    "actions": {
+      "favorites": {
+        "mark_as_favorite": "mark as favorite",
+        "unmark_as_favorite": "unmark as favorite"
+      }
+    },
+    "favorites": {
+      "favorites": "favorites"
+    }
+  },
+  "device": {
+    "alerts": {
+      "not_found": "Unable to register, the device related to this account does not exist.\n Contact the administrator for more details."
+    },
+    "disconnected": {
+      "reconnect": "try to connect now",
+      "reconnection_attempt": "Reconnection attempt in",
+      "seconds": "seconds",
+      "ssl_error": "Check that port {port} is enabled:",
+      "title": "The connection to your PBX could not be established."
+    },
+    "status": {
+      "registered": "registered",
+      "unregistered": "unregistered",
+      "sending_registration": "sending registration"
+    },
+    "actions": {
+      "refresh": "refresh"
+    },
+    "call_center": {
+      "queue_actions": {
+        "logout": "logout",
+        "login": "login",
+        "pause": "pause",
+        "unpause": "unpause",
+        "select_queues": "select queues",
+        "reload_queues": "reload queues",
+        "pause_section_title": "select the queues you want to pause.",
+        "unpause_section_title": "select the queues you want to unpause.",
+        "manage": "manage",
+        "pause_all": "pause all",
+        "logout_all": "log out from all",
+        "unpause_all": "unpause all",
+        "login_all": "login in all"
+      },
+      "active_queues": "active queues",
+      "tooltips": {
+        "login": "login to queues",
+        "is_active": "active on {count} queues",
+        "logged_queues": "logged in {count} queues.",
+        "paused_queues": "{count} paused queues.",
+        "logged_out_queues": "{count} logged out queues"
+      },
+      "reason": "reason",
+      "default_reasons": {
+        "administrative": "administrative",
+        "lunch": "lunch",
+        "break": "break",
+        "wc": "wc"
+      },
+      "alerts": {
+        "success": {
+          "pause": "paused successfully",
+          "login": "you have successfully logged into the queues.",
+          "unpause": "successfully resumed",
+          "logout": "you have successfully logged out"
+        },
+        "no_queues_paused": "no queues paused",
+        "no_active_queues": "no active queues"
+      },
+      "queues_paused": "queues paused",
+      "manage": {
+        "tabs": {
+          "logged_out_queues": "logged out queues",
+          "logged_in_queues": "logged in queues",
+          "paused_queues": "paused queues"
+        }
+      },
+      "queue": "queue | queues"
+    },
+    "unregistered": {
+      "title": "Your device is not registered. Please contact your PBX administrator to avoid missing calls.",
+      "try_register": "try to register"
+    }
+  },
+  "directories": {
+    "directory": "directory | directories",
+    "info": {
+      "actions": "actions",
+      "email": "email",
+      "job_title": "job title",
+      "name": "name",
+      "organization": "organization",
+      "telephone": "telephone",
+      "mobile_number": "mobile number",
+      "home_number": "home number"
+    },
+    "loading": "loading contacts",
+    "no_assigned": "you do not have PhoneBooks assigned",
+    "no_contacts": "no data to display"
+  },
+  "footer": {
+    "copyright": "{app_name} Omnichannel Communication System - {company} Copyright © {year}",
+    "documentation": "documentación e información adicional",
+    "slogan": "unified communications"
+  },
+  "globals": {
+    "actions": {
+      "back": "back",
+      "cancel": "cancel",
+      "create": {
+        "create": "create",
+        "success": "the {source} was created successfully"
+      },
+      "delete": {
+        "delete": "delete",
+        "success": "the {source} was deleted successfully"
+      },
+      "edit": "edit",
+      "reset": "reset",
+      "save": "save",
+      "update": {
+        "success": "the {source} was updated successfully",
+        "update": "update"
+      },
+      "done": "done",
+      "import": "import",
+      "export": "export",
+      "restart": "restart"
+    },
+    "alerts": {
+      "actions": {
+        "close": "close",
+        "ok": "ok",
+        "view": "view"
+      },
+      "avatar": {
+        "invalid_file_size": "your file is too big! Please select an image under 2MB",
+        "invalid_file_type": "please choose an valid image"
+      },
+      "confirm": {
+        "delete": {
+          "content": "Are you sure you want to delete this {source}?",
+          "title": "delete {name}"
+        }
+      },
+      "dev_console_alert_content": "This browser feature is intended for developers. If someone instructed you to copy and paste something here to enable a feature, it is a fraud. If you do, this person will be able to access your account.",
+      "dev_console_alert_title": "Stop!",
+      "restart_app": {
+        "title": "{app_name}",
+        "message": "some changes require {app_name} to be restarted before they can be applied."
+      }
+    },
+    "invalid_file": "Choose a valid file",
+    "loaders": {
+      "creating": "creating",
+      "deleting": "deleting",
+      "updating": "updating",
+      "loading": "loading"
+    },
+    "max_file_size_exceeded": "Your file is too big! Please select an file under 10MB",
+    "name": "name",
+    "no_extension": "you do not have an extension assigned.",
+    "no_results": "no results found",
+    "not_available": "not available",
+    "password": "password",
+    "required": "required",
+    "search": "search",
+    "search_source": "search {source}",
+    "unknown": "unknown",
+    "username": "username",
+    "rules": {
+      "email": "e-mail must be valid"
+    },
+    "email": "email",
+    "suggestions": "suggestions",
+    "order_by": {
+      "options": {
+        "name": "name",
+        "date": "date"
+      }
+    },
+    "sort_by": {
+      "options": {
+        "asc": "asc",
+        "desc": "desc"
+      }
+    }
+  },
+  "login": {
+    "copyright": "Powered by {company} © {year} . All rights reserved.",
+    "loginButton": "login",
+    "loginError": "Wrong username or password",
+    "password_reset": {
+      "forgot_password": "forgot your password?",
+      "reset": "reset password",
+      "change": "change your password"
+    },
+    "username_or_email": "username or email"
+  },
+  "main_menu": {
+    "about": "about",
+    "administration": {
+      "groups": "groups",
+      "menu_name": "administration",
+      "presence_status": "presence status",
+      "sms_provider": "sms provider",
+      "users_manager": "users"
+    },
+    "logout": "logout",
+    "settings": "settings"
+  },
+  "misc": {
+    "dial": "dial",
+    "hello": "hello, {user_name}",
+    "welcome": "Welcome to {app_name}",
+    "try_again": "try again",
+    "yesterday": "yesterday",
+    "add": "add",
+    "no_data": "no data to display",
+    "main_tenant": "main tenant",
+    "active": "active",
+    "paused": "paused",
+    "all": "all",
+    "error_title": "an error has occurred",
+    "order_by": "order by",
+    "you": "you",
+    "filter_by_name": "filter by name",
+    "more": "more",
+    "welcome_features_section_title": "stay connected with {app_name}",
+    "preferences": "preferences",
+    "pwa": {
+      "actions": {
+        "install": "install",
+        "not_now": "not now"
+      },
+      "promote_install": "find what you need faster with our app!"
+    },
+    "cause": "cause",
+    "server_connection": {
+      "connection_error": {
+        "title": "The connection to your server could not be established.",
+        "suggestion": "Please, contact the administrator."
+      }
+    }
+  },
+  "pbx_settings": {
+    "alerts": {
+      "error": "The settings were not updated because a connection could not be established. Please verify the data entered and try again.",
+      "success": "The data has been updated successfully."
+    },
+    "description": "Set up relevant data to connect to your PBX. This information is necessary to register the extensions from its users, voicemail, call history, among other characteristics.",
+    "fields": {
+      "host": {
+        "hint": "",
+        "host": "host"
+      },
+      "key": {
+        "edit": "edit key",
+        "hint": "",
+        "key": "key"
+      },
+      "pjsip_port": {
+        "hint": "Configure the port to be used for extension registration",
+        "pjsip_port": "PJSIP port"
+      },
+      "port": {
+        "hint": "",
+        "port": "port"
+      },
+      "secure": {
+        "hint": "",
+        "secure": "secure"
+      },
+      "wss_port": {
+        "hint": "If you have a firewall, don't forget to allow TCP port through so your client can connect.",
+        "wss_port": "WSS port"
+      }
+    },
+    "module_name": "PBX settings",
+    "pbx_status": {
+      "checking_connection": "checking connection",
+      "connected": "connected",
+      "disconnected": "disconnected"
+    }
+  },
+  "recordings": {
+    "not_allowed": "you do not have permissions to access this module",
+    "recording": "recording | recordings"
+  },
+  "right_menu": {
+    "check_updates": "check for updates",
+    "logout": "logout",
+    "settings": "settings",
+    "troubleshooting": "troubleshooting",
+    "reset_app_data": "reset app data",
+    "toggle_desktop_app_size": {
+      "mobile": "mobile view",
+      "desktop": "default view"
+    }
+  },
+  "settings": {
+    "actions": {
+      "save": "save"
+    },
+    "audio": {
+      "audio": "audio",
+      "echo_cancellation": {
+        "description": "feature which attempts to prevent echo effects on a two-way audio connection",
+        "echo_cancellation": "echo cancellation"
+      },
+      "noise_suppression": {
+        "description": "automatically filters the audio to remove background noise",
+        "noise_suppression": "noise suppression"
+      },
+      "volume": {
+        "label": "media volume",
+        "description": "This configuration will be applied to the ringtones of calls and other sounds of the application."
+      }
+    },
+    "calls": {
+      "call": "calls",
+      "call_history_limit": {
+        "call_history_limit": "call history limit",
+        "description": "set the limit of records to show in call history"
+      },
+      "calls": "calls",
+      "ringtone": {
+        "description": "ringtone to be played on incoming calls",
+        "ringtone": "ringtone"
+      },
+      "auto_answer": {
+        "label": "auto answer",
+        "modes": {
+          "instant": "instant auto answer",
+          "after": "auto answer after (1 - 25 seconds)"
+        },
+        "rules": {
+          "timer": "the number must be between 1 and 25"
+        }
+      }
+    },
+    "devices": {
+      "audio": "audio",
+      "camera": "camera",
+      "device_placeholder": "select a device",
+      "devices": "devices",
+      "microphone": "microphone",
+      "no_devices_available": "no devices were detected",
+      "default": {
+        "camera": "default camera",
+        "microphone": "default microphone",
+        "speaker": "system default speaker"
+      },
+      "speaker": "speaker",
+      "devices_selection": {
+        "input_device": {
+          "label": "input device"
+        },
+        "output_device": {
+          "label": "output device"
+        },
+        "input_speaker": {
+          "label": "input speaker"
+        },
+        "output_speaker": {
+          "label": "output speaker"
+        },
+        "ringing_device": {
+          "label": "ringing device"
+        }
+      }
+    },
+    "general": {
+      "dark_mode": {
+        "dark_mode": "dark mode",
+        "description": "change the appearance of {app_name} to dark tones"
+      },
+      "general": "general",
+      "push_notifications": {
+        "description": "receive desktop notifications for certain events ",
+        "push_notifications": "desktop notifications"
+      },
+      "timezone": {
+        "description": "the local time of a region or country",
+        "timezone": "timezone"
+      }
+    },
+    "presence": {
+      "additional_information": {
+        "additional_information": "additional information",
+        "description": "additional message for your presence status",
+        "label": "presence status message"
+      },
+      "presence": "presence",
+      "presence_status": {
+        "description": "select a state according to your availability",
+        "presence_status": "presence status"
+      }
+    },
+    "settings": "settings",
+    "video": {
+      "frame_rate": {
+        "description": "indicating the frame rate, in frames per second",
+        "frame_rate": "frame rate"
+      },
+      "max_aspect_ratio": {
+        "description": "set the proportional relationship between the width and height of the video",
+        "max_aspect_ratio": "max aspect ratio"
+      },
+      "resize_mode": {
+        "description": "specify the resolution mode of the video track.",
+        "options": {
+          "crop_and_scale": "crop and scale",
+          "none": "none"
+        },
+        "resize_mode": "resize mode"
+      },
+      "video": "video"
+    },
+    "profile": {
+      "profile_picture": {
+        "profile_picture": "profile picture",
+        "tabs": {
+          "upload_photo": "upload photo",
+          "take_photo": "take photo",
+          "current_picture": "current picture"
+        },
+        "upload_photo": {
+          "drag": "drag a profile picture here",
+          "select": "select a photo from your computer",
+          "label": "drop file or click to upload",
+          "mobile_label": "tap to upload"
+        },
+        "crop": {
+          "preview": "preview",
+          "label": "adjust photo"
+        },
+        "take_photo": {
+          "label": "take photo"
+        }
+      },
+      "full_name": {
+        "full_name": "full name"
+      },
+      "username": {
+        "username": "username"
+      },
+      "extension": {
+        "extension": "extension"
+      },
+      "profile": "profile"
+    },
+    "account": {
+      "account": "account",
+      "password": {
+        "change_password": "change password",
+        "fields": {
+          "password": {
+            "label": "current password",
+            "rules": {
+              "required": "current password is required"
+            }
+          },
+          "new_password": {
+            "label": "new password",
+            "rules": {
+              "required": "new password is required"
+            }
+          },
+          "password_confirmation": {
+            "password_confirmation": "password confirmation",
+            "rules": {
+              "required": "password confirmation is required",
+              "no_match": "passwords do not match"
+            }
+          }
+        },
+        "set_new_password": "set new password",
+        "alerts": {
+          "success": "the password has been changed successfully",
+          "error": "the password could not be changed.",
+          "no_match_old_password": "the password does not match the old password.  ",
+          "password_error": "confirm password"
+        }
+      }
+    },
+    "alert": {
+      "success": "settings have been saved.",
+      "error": "an error occurred while saving settings"
+    },
+    "call_center": {
+      "call_center": "call center",
+      "log_into_queues_on_startup": {
+        "label": "log into queues on startup",
+        "description": "automatically log in to assigned queues when starting the application"
+      },
+      "log_out_from_queues_when_closing_the_app": {
+        "label": "log out from Queues when closing the application"
+      },
+      "open_crm_url": {
+        "label": "open the CRM url in:",
+        "options": {
+          "new_tab": {
+            "label": "new tab"
+          },
+          "new_window": {
+            "label": "new window",
+            "support_alert": "this option is subject to browser and operating system permissions."
+          }
+        },
+        "description": "in case your agent profile has a CRM URL configured, choose how the URL should be opened in your browser."
+      }
+    },
+    "application": {
+      "tab_name": "Application",
+      "fields": {
+        "auto_launch": {
+          "label": "app auto-launch",
+          "description": "App Auto-Launch On OS Startup"
+        },
+        "open_as_hidden": {
+          "label": "open the app as hidden",
+          "description": "On auto launch, run the app as hidden."
+        },
+        "host": {
+          "placeholder": "your-pbx.com",
+          "label": "Enter the host where {app_name} is installed (requires restarting {app_name})"
+        },
+        "keep_app_on_close": {
+          "label": "On close, keep the application running"
+        },
+        "hardware_acceleration": {
+          "label": "Disable GPU hardware acceleration (requires restarting {app_name})"
+        }
+      }
+    }
+  },
+  "users": {
+    "all_groups": "all groups",
+    "no_users": "no users available",
+    "users": "user | users",
+    "has_no_extension": "has no extension",
+    "groups": {
+      "members": "member | members"
+    },
+    "options": {
+      "sort_by": {
+        "label": "sort by users online"
+      }
+    },
+    "status": {
+      "in_call": "in call",
+      "on_the_phone": "on the phone",
+      "available": "available"
+    }
+  },
+  "voice_messages": {
+    "not_found": "no messages found",
+    "types": {
+      "inbox": "new",
+      "old": "old",
+      "urgent": "urgent"
+    },
+    "voice_message": "voice message | voice messages",
+    "voicemail_count": "You don't have voice messages | You have {count} voice message | You have {count} voice messages",
+    "no_messages": "you have no new messages"
+  },
+  "wizard": {
+    "actions": {
+      "continue": "continue",
+      "finish": "finish",
+      "next": "next",
+      "previous": "previous"
+    },
+    "steps": {
+      "database_setup": {
+        "error": "Could not connect. Please check your settings.",
+        "fields": {
+          "password": {
+            "label": "database password",
+            "placeholder": "password"
+          },
+          "username": {
+            "label": "database username",
+            "placeholder": "root"
+          }
+        },
+        "info": "Enter a user with privileges to install the application database.",
+        "loading_message": "installing database, please wait...",
+        "step_name": "database setup"
+      },
+      "pbx_settings": {
+        "fields": {
+          "host": {
+            "label": "host",
+            "placeholder": "localhost"
+          },
+          "key": {
+            "hint": "If you are installing on the same server as {company}, you can leave this field blank. A key will be automatically generated.",
+            "label": "application key",
+            "placeholder": "application key"
+          },
+          "port": {
+            "label": "port",
+            "placeholder": "80"
+          },
+          "secure": {
+            "hint": "indicates a secure connection through HTTPS. Usually, you check this option when using port 443.",
+            "label": "secure"
+          }
+        },
+        "loading_message": "Checking connection, please wait...",
+        "step_name": "PBX settings"
+      },
+      "user_setup": {
+        "error": "could not create user please check your settings",
+        "fields": {
+          "name": {
+            "label": "name",
+            "placeholder": "john doe"
+          },
+          "password": {
+            "hint": "",
+            "label": "user password",
+            "placeholder": "password"
+          },
+          "password_confirmation": {
+            "label": "password confirmation",
+            "placeholder": "repeat your password"
+          },
+          "timezone": {
+            "label": "timezone"
+          },
+          "username": {
+            "label": "username",
+            "placeholder": "admin"
+          }
+        },
+        "loading_message": "Creating...",
+        "step_name": "user setup"
+      }
+    }
+  },
+  "mail_settings": {
+    "alerts": {
+      "error": "Could not update configurations. Check the data entered and try again.",
+      "success": "The data has been updated successfully."
+    },
+    "description": "configure your mail server so that the application can send emails.",
+    "fields": {
+      "host": {
+        "hint": "",
+        "host": "host"
+      },
+      "port": {
+        "hint": "",
+        "port": "port"
+      },
+      "type": {
+        "options": {
+          "smtp": "smtp"
+        },
+        "label": "type"
+      },
+      "username": {
+        "label": "username"
+      },
+      "password": {
+        "label": "password"
+      },
+      "encryption": {
+        "label": "encryption"
+      },
+      "from_address": {
+        "label": "from address"
+      },
+      "from_name": {
+        "label": "from name"
+      },
+      "bcc_mail": {
+        "label": "bcc mail"
+      },
+      "test": {
+        "label": "send email test"
+      }
+    },
+    "module_name": "mail settings",
+    "pbx_status": {
+      "checking_connection": "checking connection",
+      "connected": "connected",
+      "disconnected": "disconnected"
+    },
+    "test": {
+      "alerts": {
+        "success": "the email was sent successfully",
+        "failed": "the mail could not be sent"
+      }
+    }
+  },
+  "ice_servers": {
+    "module_name": "ICE servers",
+    "fields": {
+      "url": {
+        "label": "STUN or TURN URI"
+      },
+      "username": {
+        "label": "username"
+      },
+      "credential": {
+        "label": "credential"
+      }
+    },
+    "connectivity": {
+      "checking": "checking connectivity",
+      "failed": "the server does not work",
+      "success": "the server works"
+    },
+    "description": "This configuration Specify the URLs of the servers to be used for ICE negotiations. They are usually STUN and/or TURN servers.\n\nThis is a global setting and you must specify two URLs.",
+    "alerts": {
+      "success": "The settings have been updated successfully.",
+      "error": "Could not update configurations. Check the data entered and try again."
+    },
+    "servers": "server | servers",
+    "actions": {
+      "add_server": {
+        "label": "add secondary server"
+      },
+      "remove_server": {
+        "label": "remove secondary server"
+      }
+    }
+  },
+  "import": {
+    "actions": {
+      "download_template": "download import format",
+      "remove_file": "remove file"
+    },
+    "alerts": {
+      "failed": "an error occurred while importing"
+    }
+  },
+  "export": {
+    "actions": {},
+    "alerts": {
+      "success": "the data has been successfully exported"
+    }
+  },
+  "shortcuts": {
+    "label": "shortcuts",
+    "shortcuts": {
+      "make_call": {
+        "description": "place a call",
+        "tooltip": "make a call to the currently visible number, user or contact"
+      },
+      "answer_incoming_call": {
+        "description": "answer an incoming call"
+      },
+      "decline_incoming_call": {
+        "description": "decline an incoming call"
+      },
+      "toggle_dialpad": {
+        "description": "toggle dialpad"
+      },
+      "end_call": {
+        "description": "end a call or end a conference call (hang up on all participants)."
+      },
+      "toggle_mute_audio": {
+        "description": "toggle mute audio"
+      },
+      "toggle_camera": {
+        "description": "toggle video camera on a call"
+      },
+      "toggle_hold": {
+        "description": "hold or resume a call when the focus is on the call panel"
+      },
+      "transfer_call": {
+        "description": "transfer an established call when the focus is on the call panel"
+      }
+    }
+  },
+  "app_setup": {
+    "title": "Enter the PBX host where {app_name} is installed",
+    "description": "",
+    "fields": {
+      "host": {
+        "placeholder": "your-pbx.com"
+      },
+      "auto_launch": {
+        "label": "app auto-launch on OS startup"
+      }
+    },
+    "alerts": {
+      "success": "App detected successfully",
+      "error": "{app_name} is not installed on the provided host"
+    }
+  }
+}
